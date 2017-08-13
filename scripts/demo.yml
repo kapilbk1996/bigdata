@@ -1,0 +1,11 @@
+---
+- hosts: web
+  tasks:
+  - package:
+     name: "httpd"
+     state: present
+     use: yum
+
+  - service:
+     name: "httpd"
+     state: restarted    	

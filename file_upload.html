@@ -1,0 +1,75 @@
+<script>	
+function alrt(){
+	alert("first upload file, then proceed further");
+}
+function chck(l){
+	
+	
+	if (l==""){
+		alert("No file selected");
+		return false;
+	}
+	else
+		document.location= '/scripts/get_file_name.py?fn=' + l;		
+		return true;
+}
+
+</script>
+
+
+<br />
+<br />
+<br />
+<div align='center'>
+
+<h2>File Upload</h2>
+<br />
+<br />
+
+  <form  enctype='multipart/form-data' method='POST' action='scripts/upload.py' onsubmit="return chck(ff.value)">
+browse your file : <input type='file' name='f' id='ff' /> 	<input type='submit' value='upload'  />
+  </form>
+
+<br />
+<br />
+
+
+<table>
+
+  
+  <tr>
+	<td>Enter file name : </td>
+	<td><input name='f' placeholder='eg a.txt,demo.py' /></td>
+  </tr>
+
+  <tr>
+	<td>Enter host IP : </td>
+	<td><input name='hostIp' /></td>
+  </tr>
+
+  <tr>
+	<td>Enter replication factor : </td>
+	<td><input name='repFactor' /></td>
+  </tr>
+
+  <tr>
+	<td>Enter block size in MB : </td>
+	<td><input name='blockSize' /></td>
+  </tr>
+
+</table>
+<br />
+<br />
+<input type='submit' value= 'Proceed' onclick= alrt() />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<input type='reset' />
+
+<a href='index.html'><input type='button' value='Back' /></a>
+
+
+</div>

@@ -1,0 +1,64 @@
+<script>
+function alrret(){
+	r=confirm("File not yet uploaded into the cluster. Do you want to quit ??");
+	if (r == true){
+	 document.location='index.html';
+}
+
+}
+
+
+</script>
+<br />
+<br />
+<br />
+<div align='center'>
+<h2>Client side webpage </h2>
+<br />
+<br />
+browse your file : <b>file uploaded </b>
+<br />
+<br />
+<br />
+<br />
+<form action='scripts/client.py' >
+<table>
+  <tr>
+	<td>Enter file name : </td>
+	<td><input name='f' placeholder='eg a.txt,demo.py' /></td>
+  </tr>
+
+  <tr>
+	<td>Enter host IP : </td>
+	<td><input name='hostIp' /></td>
+  </tr>
+
+  <tr>
+	<td>Enter replication factor : </td>
+	<td><input name='repFactor' /></td>
+  </tr>
+
+  <tr>
+	<td>Enter block size in MB : </td>
+	<td><input name='blockSize' /></td>
+  </tr>
+
+
+</table>
+
+<br />
+<br />
+<input type='submit' value= 'Proceed' onclick= alrt() />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<input type='reset' />
+
+<input type='button' value='Back' onclick=alrret() />
+<br />
+<br />
+</form>
+</div>
